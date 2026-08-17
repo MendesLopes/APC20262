@@ -1,0 +1,23 @@
+      INP
+      STA num1
+      INP
+      STA num2
+      LDA zero
+      STA resultado
+loop  LDA num2
+      BRZ fim
+      LDA resultado
+      ADD num1
+      STA resultado
+      LDA num2
+      SUB um
+      STA num2
+      BRA loop
+fim   LDA resultado
+      OUT
+      HLT
+num1  DAT
+num2  DAT
+resultado DAT
+zero  DAT 0
+um    DAT 1
