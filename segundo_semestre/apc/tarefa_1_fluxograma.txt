@@ -1,0 +1,67 @@
+[INÍCIO]
+    |
+    ▼
+[INP] ─────────────► Lê primeiro número (multiplicando)
+    |
+    ▼
+[STA num1] ────────► Armazena em num1
+    |
+    ▼
+[INP] ─────────────► Lê segundo número (multiplicador)
+    |
+    ▼
+[STA num2] ────────► Armazena em num2
+    |
+    ▼
+[LDA zero] ────────► Carrega 0
+    |
+    ▼
+[STA resultado] ───► Inicializa resultado = 0
+    |
+    ▼
+┌─────────────────┐
+│   LOOP:              │
+│   LDA num2           │───► Carrega multiplicador
+└─────────────────┘
+    |
+    ▼
+┌─────────────────┐
+│   BRZ fim            │───► Se num2 = 0?
+└─────────────────┘
+    |                   |
+   SIM                 NÃO
+    |                   |
+    ▼                  ▼
+┌─────────────┐   ┌─────────────────┐
+│   FIM:          │   │   LDA resultado   	  │
+│ LDA resultado   │   └─────────────────┘
+└─────────────┘           |
+    |                         ▼
+    ▼             ┌─────────────────┐
+[OUT] ──────────►│ ADD num1           │───► Soma num1 ao resultado
+    |              └─────────────────┘
+    ▼                     |
+[HLT] ──────────►      ▼
+    |             ┌─────────────────┐
+    ▼             │ STA resultado        │───► Atualiza resultado
+[FIM]             └─────────────────┘
+                          |
+                          ▼
+                  ┌────────┐
+                  │ LDA num2 │
+                  └────────┘
+                          |
+                          ▼
+                  ┌─────────────────┐
+                  │ SUB um               │───► Decrementa num2 em 1
+                  └─────────────────┘
+                          |
+                          ▼
+                  ┌─────────────────┐
+                  │ STA num2             │───► Atualiza num2
+                  └─────────────────┘
+                          |
+                          ▼
+                  ┌─────────────────┐
+                  │ BRA loop             │───► Volta para LOOP
+                  └─────────────────┘
