@@ -1,0 +1,37 @@
+        INP
+        STA NUMERO
+        LDA UM
+        STA RESULTADO
+        LDA NUMERO
+LOOP    STA CONTADOR
+        LDA CONTADOR
+        BRZ SAIDA
+        LDA RESULTADO
+        STA AUXILIAR
+        LDA CONTADOR
+        STA CONT
+        LDA ZERO
+        STA RESULTADO
+MULT    LDA CONT
+        BRZ FIM_MULT
+        LDA RESULTADO
+        ADD AUXILIAR
+        STA RESULTADO
+        LDA CONT
+        SUB UM
+        STA CONT
+        BRA MULT
+FIM_MULT LDA CONTADOR
+        SUB UM
+        BRA LOOP
+SAIDA   LDA RESULTADO
+        OUT
+        HLT
+
+NUMERO      DAT 0
+RESULTADO   DAT 0
+CONTADOR    DAT 0
+CONT        DAT 0
+AUXILIAR    DAT 0
+UM          DAT 1
+ZERO        DAT 0
