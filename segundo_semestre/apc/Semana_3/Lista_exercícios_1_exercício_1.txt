@@ -1,0 +1,10 @@
+START   INP        
+        BRZ END     
+        ADD SOMA     
+        STA SOMA  
+	out   
+        BRA START   
+END     LDA SOMA     
+        OUT         
+        HLT         
+SOMA    DAT 0  
