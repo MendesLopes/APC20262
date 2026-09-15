@@ -1,0 +1,14 @@
+var light = createSprite(200,200);
+light.setAnimation("lightning_1");
+
+function draw() {
+background("black");
+light.x = randomNumber(200,210);
+light.y = randomNumber(200,210);
+light.setAnimation("lightning_1");
+drawSprites();
+
+
+}
+
+//o desafio foi interessante, entretanto tive algumas dificuldades e demorou para entender que o background deveria estar dentro da função

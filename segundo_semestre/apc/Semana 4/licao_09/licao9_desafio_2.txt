@@ -1,0 +1,32 @@
+var orangeFish = createSprite(400, randomNumber(0, 100));
+orangeFish.setAnimation("orange_fish");
+var blueFish = createSprite(250, randomNumber(0, 200));
+blueFish.setAnimation("blue_fish");
+var greenFish = createSprite(300, randomNumber(200, 300));
+greenFish.setAnimation("green_fish");
+var bubbleY = 400; 
+
+function draw() {
+  // Draw Background
+  background("navy");
+  
+  // Update Values
+  orangeFish.x = orangeFish.x - 2;
+  blueFish.x = orangeFish.x - 4;
+  greenFish.x = orangeFish.x - 1;
+  
+  //desenhando a bolha
+   bubbleY = bubbleY - 1; 
+  
+  noFill();
+  stroke("white");
+  strokeWeight(2);
+  ellipse(200, bubbleY, 30, 30); 
+  
+  
+  
+  // Draw Animations
+  drawSprites();
+}
+
+//desavio bem interessante que mistura os conhecimentos de desenho
