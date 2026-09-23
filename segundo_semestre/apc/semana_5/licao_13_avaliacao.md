@@ -21,8 +21,8 @@ function draw() {
   
   //If the fish gets to the left-hand side of the screen, move the fish to the right.
   if (fish.x < 0) {
-  fish.velocitX = -4;
-  fish.setAnimation("fishL");
+  fish.velocityX = 4;
+  fish.setAnimation("fishR");
 
   }  
 
