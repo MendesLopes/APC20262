@@ -12,17 +12,14 @@ function draw() {
   background("skyblue");
 
   // change the horse to a unicorn when the rainbow touches it
+  //Coloquei uma solução mais elegante
   
-   if ((((horse.x > rainbow.x) && ((horse.x - rainbow.x) < (horse.width/2 + rainbow.width/2))) || 
-    ((horse.x < rainbow.x) && ((horse.x - rainbow.x) > - (horse.width/2 + rainbow.width/2))))) {
-
-    //horse.velocityX = 0;
-  //  rainbow.velocityX = 0;
-   // horse.velocityX = 0;
+   if (horse.isTouching(rainbow)) {
     horse.setAnimation("unicorn");
   }
+
   
   drawSprites();
 }
 
-//Gostei bastante dos exercícios. O nível de dificuldade subiu de forma interessante, porém sem desestimular
+//pelo que entendi, isso que o sistema desejava
